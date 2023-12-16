@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nx serve",
     "prebuild": "rimraf ../docs",
-    "build": "cross-env PUBLIC_URL=/Unstuck npx nx build --skip-nx-cache && ncp ./dist/frontend ../docs",
+    "build": "npx nx build --skip-nx-cache && ncp ./dist/frontend ../docs",
     "test": "nx test"
   },
   "private": true,

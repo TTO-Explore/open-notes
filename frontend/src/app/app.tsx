@@ -7,7 +7,7 @@ export function App() {
   return (
     <div>
       <NxWelcome title="frontend" />
-      <p>This is new content.</p>
+      <p className=" text-blue-500">This is new content.</p>
     </div>
   );
 }

@@ -21,8 +21,7 @@ Note that this version doesn't have a backend, and the user currently has to ent
 1. Create test build from frontend folder by running `npx nx build`
 
 1. `npm i rimraf ncp --save-dev` to provide functionality used in the next steps.
-1. `npm i cross-env --save-dev`
-1. Modify package.json to use the following script on build: `cross-env PUBLIC_URL=/Unstuck npx nx build && ncp ./dist/frontend ../docs`
+1. Modify package.json to use the following script on build: `npx nx build && ncp ./dist/frontend ../docs`
 1. Add a `prebuild` command that runs `rimraf ../docs`
 1. Add `base: "/Unstuck/",` underneath plugins line in vite.config.js (based on GitHub pages URL.)
 
@@ -37,7 +36,7 @@ Just clone the repo and then run `npm i` from inside the frontend directory, ass
 
 ## Testing + Deploy Instructions
 
-- Run a local server by running (from frontend folder) `npm serve`
+- Run a local server by running (from frontend folder) `npm start`
 - Build with `npm run build`
 - Deploy with commit and push (using git)
 - See deployed version at: https://tto-explore.github.io/Unstuck/
