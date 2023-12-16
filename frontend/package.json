@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
-    "build": "nx build",
+    "prebuild": "rimraf ../docs",
+    "build": "npx nx build && ncp ./dist/frontend ../docs",
     "test": "nx test"
   },
   "private": true,
@@ -12,9 +13,11 @@
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@swc/helpers": "~0.5.2",
+    "ncp": "^2.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-router-dom": "^6.21.0"
+    "react-router-dom": "^6.21.0",
+    "rimraf": "^5.0.5"
   },
   "devDependencies": {
     "@nx/cypress": "v17.2.5",

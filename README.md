@@ -20,13 +20,20 @@ Note that this version doesn't have a backend, and the user currently has to ent
 1. `npm i react-router-dom`
 1. Create test build from frontend folder by running `npx nx build`
 
+1. `npm i rimraf ncp` to provide functionality used in the next step.
+1. Modify package.json to use the following script on build: `npx nx build && ncp ./dist/frontend ../docs`
+1. Add a `prebuild` command that runs `rimraf ../docs`
+
 1. Update Site Favicon.
 1. Update Site Title (can programmatically update on each page).
+
+## Cloning to a new workstation
+Just clone the repo and then run `npm i` from inside the frontend directory, assuming you already have node and npm installed.
 
 
 ## Testing + Deploy Instructions
 
 - Run a local server by running (from frontend folder) `npm serve`
-- Build with `npx nx build`
+- Build with `npm run build`
 - Deploy with commit and push (using git)
 
