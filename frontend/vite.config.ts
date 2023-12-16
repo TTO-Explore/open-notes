@@ -18,6 +18,7 @@ export default defineConfig({
   },
 
   plugins: [react(), nxViteTsPaths()],
+  base: "/Unstuck/",
 
   // Uncomment this if you are using workers.
   // worker: {
