@@ -7,6 +7,7 @@ export function App() {
   return (
     <div>
       <NxWelcome title="frontend" />
+      <p>This is new content.</p>
     </div>
   );
 }

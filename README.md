@@ -24,6 +24,7 @@ Note that this version doesn't have a backend, and the user currently has to ent
 1. `npm i cross-env --save-dev`
 1. Modify package.json to use the following script on build: `cross-env PUBLIC_URL=/Unstuck npx nx build && ncp ./dist/frontend ../docs`
 1. Add a `prebuild` command that runs `rimraf ../docs`
+1. Add `base: "/Unstuck/",` underneath plugins line in vite.config.js (based on GitHub pages URL.)
 
 1. Update Site Favicon.
 1. Update Site Title (can programmatically update on each page).
