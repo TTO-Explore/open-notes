@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nx serve",
     "prebuild": "rimraf ../docs",
-    "build": "npx nx build && ncp ./dist/frontend ../docs",
+    "build": "cross-env PUBLIC_URL=/Unstuck npx nx build && ncp ./dist/frontend ../docs",
     "test": "nx test"
   },
   "private": true,
@@ -13,6 +13,7 @@
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@swc/helpers": "~0.5.2",
+    "cross-env": "^7.0.3",
     "ncp": "^2.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
