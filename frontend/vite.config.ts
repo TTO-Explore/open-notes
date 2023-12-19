@@ -25,6 +25,10 @@ export default defineConfig({
   //  plugins: [ nxViteTsPaths() ],
   // },
 
+  define: {
+    global: 'window'
+  }, // Necessary for react-mathquill
+
   build: {
     outDir: './dist/.',
     reportCompressedSize: true,

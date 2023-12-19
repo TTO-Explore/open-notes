@@ -30,6 +30,14 @@ Note that this version doesn't have a backend, and the user currently has to ent
 
 1. Set BrowserRouter basepath and build configuration (done in earlier step) to use /Unstuck as a basepath when building. Ideally, set BrowserRouter to change behavior when testing locally.
 
+1. `npm i react-mathquill` then
+1. Add  define: {
+  global: 'window'
+},
+to vite.config.ts
+
+1. `npm i openai`
+
 ## Cloning to a new workstation
 Just clone the repo and then run `npm i` from inside the frontend directory, assuming you already have node and npm installed.
 
@@ -41,3 +49,5 @@ Just clone the repo and then run `npm i` from inside the frontend directory, ass
 - Deploy with commit and push (using git)
 - See deployed version at: https://tto-explore.github.io/Unstuck/
 
+## Recommended VS Code Extensions
+- Tailwind CSS Intellisense
